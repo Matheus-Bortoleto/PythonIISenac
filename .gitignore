@@ -1,0 +1,68 @@
+# Ignorar diretórios e arquivos de ambiente virtual
+.venv/
+venv/
+env/
+/bin/
+/include/
+/lib/
+/pyvenv.cfg
+/pip-selfcheck.json
+/share/
+
+# Ignorar arquivos de cache e compilação do Python
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+.Python/
+build/
+develop-eggs/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.bak
+*.orig
+*.swp
+*~
+.ropeproject/
+
+# Ignorar arquivos de banco de dados
+*.sqlite3
+*.db
+*.log
+
+# Ignorar arquivos específicos do Django
+*.pot
+*.mo
+*.po
+
+# Ignorar diretórios de mídia e estáticos (se não forem versionados)
+/media/
+/static/
+
+# Ignorar arquivos de configurações sensíveis (muito importante!)
+*.env
+.env
+settings_local.py
+local_settings.py
+
+# Ignorar arquivos gerados pelo sistema operacional
+.DS_Store
+.Trashes
+Thumbs.db
+
+# Ignorar logs e arquivos de depuração
+*.log
+debug.log
+error.log
+
+# Ignorar arquivos de IDEs (opcional, dependendo da sua IDE)
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace

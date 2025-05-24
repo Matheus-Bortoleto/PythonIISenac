@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olá Mundo e Django</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin: 0.5em 0;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .highlight {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.5em 1em;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .highlight:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-contato {
+        display: inline-block;
+        margin-top: 2em;
+        padding: 0.8em 1.5em;
+        background-color: #ffffff;
+        color: #2575fc;
+        border-radius: 6px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="highlight">
+    <h1>Olá Mundo</h1>
+  </div>
+  <div class="highlight">
+    <h1>Olá Django</h1>
+  </div>
+  <div>
+    <a href="/contato" class="btn-contato">Ir para Contato</a>
+  </div>
+</body>
+</html>

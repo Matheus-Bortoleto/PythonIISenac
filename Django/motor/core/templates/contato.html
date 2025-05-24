@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5em;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .info-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 500px;
+      width: 90%;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin: 0.8em 0;
+    }
+
+    strong {
+      color: #ffeb3b;
+    }
+
+    .btn-home {
+      display: inline-block;
+      margin-top: 2em;
+      padding: 0.8em 1.5em;
+      background-color: #ffffff;
+      color: #2575fc;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-home:hover {
+      background-color: #e0e0e0;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>Página de Contato</h1>
+  <div class="info-box">
+    <p><strong>Empresa:</strong> {{ nome }}</p>
+    <p><strong>Telefone:</strong> {{ fone }}</p>
+    <p><strong>E-mail:</strong> {{ email }}</p>
+  </div>
+  <div>
+    <a href="/" class="btn-home">Voltar para Home</a>
+  </div>
+</body>
+</html>
