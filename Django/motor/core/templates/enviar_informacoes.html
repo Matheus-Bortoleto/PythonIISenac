@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Informações - Soluções Automotivas</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Soluções Automotivas</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="veiculos.html">Veículos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="enviar_informacoes.html" class="active">Enviar Informações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="info-form">
+            <div class="container">
+                <h2>Envie Suas Informações Detalhadas</h2>
+                <p class="section-description">Preencha o formulário abaixo para nos enviar detalhes sobre seu veículo (para venda/troca) ou suas necessidades específicas de compra/serviço. Em breve entraremos em contato!</p>
+
+                <form action="#" method="POST" class="contact-form">
+                    <h3>Seus Dados</h3>
+                    <div class="form-group">
+                        <label for="name">Nome Completo:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <h3>Detalhes do Veículo (se aplicável)</h3>
+                    <div class="form-group">
+                        <label for="car-make">Marca do Veículo:</label>
+                        <input type="text" id="car-make" name="car_make">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-model">Modelo do Veículo:</label>
+                        <input type="text" id="car-model" name="car_model">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-year">Ano de Fabricação:</label>
+                        <input type="number" id="car-year" name="car_year" min="1900" max="2099">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-mileage">Quilometragem (KM):</label>
+                        <input type="number" id="car-mileage" name="car_mileage" min="0">
+                    </div>
+                    <div class="form-group">
+                        <label for="car-details">Detalhes Adicionais do Veículo / Necessidades Específicas:</label>
+                        <textarea id="car-details" name="car_details" rows="8"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Informações</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Soluções Automotivas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

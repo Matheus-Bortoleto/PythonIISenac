@@ -1,0 +1,561 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden; /* Para limpar floats */
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 5px solid #ff4500; /* Laranja vibrante */
+}
+
+header h1 {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header a:hover, header a.active {
+    color: #ff4500;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    background: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #e03c00;
+}
+
+.btn-secondary {
+    background-color: #666;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #555;
+}
+
+.btn-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+/* Seções */
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.section-description {
+    text-align: center;
+    max-width: 700px;
+    margin: -20px auto 40px auto;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* Hero Section (Home Page) - Slider */
+#hero {
+    background: #555;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative; /* Para posicionar os botões do slider */
+    overflow: hidden; /* Esconde as imagens que não estão visíveis */
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider {
+    display: flex;
+    width: 200%; /* Duas imagens lado a lado */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 50%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#hero h2 {
+    color: #fff;
+    font-size: 3em;
+    margin-bottom: 10px;
+    position: relative; /* Para ficar acima do slider */
+    z-index: 10;
+}
+
+#hero p {
+    font-size: 1.2em;
+    max-width: 700px;
+    position: relative; /* Para ficar acima do slider */
+    z-index: 10;
+}
+
+/* Welcome Section (Home Page) */
+#welcome p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* CTA Sections (Home Page) */
+#cta-services, #cta-about {
+    text-align: center;
+    background-color: #f0f0f0; /* Cor de fundo para as CTAs */
+    padding: 30px 0;
+    margin-bottom: 20px;
+}
+
+#cta-services h2, #cta-about h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#cta-services p, #cta-about p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+}
+
+/* Services Page */
+#services-page .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-item-detail {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item-detail:hover {
+    transform: translateY(-5px);
+}
+
+.service-item-detail h3 {
+    color: #ff4500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.service-item-detail ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 15px;
+    color: #555;
+}
+
+.service-item-detail li {
+    margin-bottom: 5px;
+}
+
+/* Vehicles List (Veículos Page) */
+#vehicles-list {
+    text-align: center;
+}
+
+.vehicle-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.vehicle-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+}
+
+.vehicle-card img {
+    max-width: 100%;
+    height: 200px; /* Altura fixa para as imagens */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.vehicle-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.vehicle-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.vehicle-card .price {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff4500;
+    margin-bottom: 15px;
+}
+
+/* About Us (Sobre Nós Page) */
+#about-us {
+    display: flex; /* Para alinhar imagem e texto */
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about-us .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 30px;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+#about-us p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+#about-us h3 {
+    color: #ff4500;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#about-us ul {
+    list-style: square;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.additional-grid { /* Reutilizado para diferenciais na página Sobre Nós */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.additional-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.additional-item:hover {
+    transform: translateY(-5px);
+}
+
+.additional-item h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Contact Info (Contato Page) */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.method-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.method-item h3 {
+    color: #ff4500;
+    margin-bottom: 10px;
+}
+
+.map-container {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.map-container h3 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.map-container iframe {
+    border-radius: 5px;
+}
+
+/* Info Form (Enviar Informações Page) */
+.contact-form {
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form h3 {
+    color: #ff4500;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-form h3:first-of-type { /* Remove margin-top do primeiro h3 do formulário */
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: calc(100% - 22px); /* 100% menos o padding e borda */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Call to action small text */
+.call-to-action-small {
+    text-align: center;
+    margin-top: 30px;
+    font-style: italic;
+    color: #555;
+}
+
+.call-to-action-small a {
+    color: #ff4500;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.call-to-action-small a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 40px;
+    border-top: 5px solid #ff4500;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1,
+    header nav {
+        float: none;
+        text-align: center;
+    }
+
+    header nav ul {
+        padding-top: 10px;
+    }
+
+    header li {
+        display: block;
+        padding: 5px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    .service-grid,
+    .additional-grid,
+    .vehicle-grid,
+    .contact-methods {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="tel"],
+    .form-group input[type="number"],
+    .form-group textarea {
+        width: calc(100% - 20px); /* Ajuste para preenchimento em telas menores */
+    }
+
+    #about-us {
+        flex-direction: column; /* Empilha imagem e texto em telas menores */
+    }
+
+    #about-us .container {
+        flex-direction: column;
+    }
+
+    .about-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

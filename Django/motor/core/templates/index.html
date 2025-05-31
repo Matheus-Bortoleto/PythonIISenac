@@ -1,65 +1,78 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Olá Mundo e Django</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #6a11cb, #2575fc);
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin: 0.5em 0;
-      text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    }
-
-    .highlight {
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 0.5em 1em;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-      margin-top: 10px;
-    }
-
-    .highlight:hover {
-      transform: scale(1.05);
-    }
-
-    .btn-contato {
-        display: inline-block;
-        margin-top: 2em;
-        padding: 0.8em 1.5em;
-        background-color: #ffffff;
-        color: #2575fc;
-        border-radius: 6px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluções Automotivas - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    
 </head>
 <body>
-  <div class="highlight">
-    <h1>Olá Mundo</h1>
-  </div>
-  <div class="highlight">
-    <h1>Olá Django</h1>
-  </div>
-  <div>
-    <a href="/contato" class="btn-contato">Ir para Contato</a>
-  </div>
+    <header>
+        <div class="container">
+            <h1>Soluções Automotivas</h1>
+            <nav>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="/servicos">Serviços</a></li>
+                    <li><a href="/veiculos">Veículos</a></li>
+                    <li><a href="/sobre">Sobre Nós</a></li>
+                    <li><a href="/contato">Contato</a></li>
+                    <li><a href="/enviar_informacoes">Enviar Informações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="slider-container">
+                    <div class="slider">
+                        <div class="slide"><img src="img/hero-background.jpg" alt="Imagem Automotiva 1"></div>
+                        <div class="slide"><img src="img/placeholder-car-1.jpg" alt="Imagem Automotiva 2"></div>
+                    </div>
+                    <button class="slider-btn prev">&#10094;</button>
+                    <button class="slider-btn next">&#10095;</button>
+                </div>
+                <h2>A Sua Jornada Automotiva Começa Aqui.</h2>
+                <p>Encontre o carro perfeito, os melhores serviços e o suporte que você merece.</p>
+                <a href="veiculos.html" class="btn">Ver Veículos</a>
+                <a href="servicos.html" class="btn btn-secondary">Nossos Serviços</a>
+            </div>
+        </section>
+
+        <section id="welcome">
+            <div class="container">
+                <h2>Bem-vindo à Soluções Automotivas</h2>
+                <p>Na **Soluções Automotivas**, combinamos paixão por veículos com um compromisso inabalável com a excelência e a satisfação do cliente. Seja você um comprador em busca do carro dos sonhos ou um proprietário procurando serviços de manutenção de alta qualidade, estamos aqui para superar suas expectativas.</p>
+                <p>Navegue pelo nosso site para descobrir a nossa vasta gama de veículos, os serviços especializados que oferecemos e os diferenciais que nos tornam a escolha ideal para todas as suas necessidades automotivas.</p>
+            </div>
+        </section>
+
+        <section id="cta-services">
+            <div class="container">
+                <h2>Precisa de um Serviço?</h2>
+                <p>Desde a manutenção preventiva até reparos complexos, nossa equipe de especialistas está pronta para cuidar do seu carro com a máxima atenção e profissionalismo.</p>
+                <a href="servicos.html" class="btn">Conheça Nossos Serviços</a>
+            </div>
+        </section>
+
+        <section id="cta-about">
+            <div class="container">
+                <h2>Conheça Nossa História</h2>
+                <p>Descubra os valores que nos guiam, a nossa equipe dedicada e por que somos a escolha de confiança no setor automotivo.</p>
+                <a href="sobre.html" class="btn">Mais Sobre Nós</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Soluções Automotivas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="{% static 'js/script.js' %}" defer></script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veículos - Soluções Automotivas</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Soluções Automotivas</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="veiculos.html" class="active">Veículos</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="enviar_informacoes.html">Enviar Informações</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="vehicles-list">
+            <div class="container">
+                <h2>Nossos Veículos Disponíveis</h2>
+                <p class="section-description">Confira nossa seleção atual de veículos novos e seminovos. Encontre o carro dos seus sonhos!</p>
+                <div class="vehicle-grid">
+                    <div class="vehicle-card">
+                        <img src="img/placeholder-car-1.jpg" alt="Carro Modelo A">
+                        <h3>Sedan Premium (Modelo A)</h3>
+                        <p>Ano: 2023 | Cor: Preto Metálico | KM: 15.000</p>
+                        <p>Motor 2.0 Flex, Automático, Completo com multimídia e teto solar.</p>
+                        <span class="price">R$ 85.000,00</span>
+                        <a href="contato.html" class="btn-small">Saiba Mais</a>
+                    </div>
+                    <div class="vehicle-card">
+                        <img src="img/placeholder-car-2.jpg" alt="Carro Modelo B">
+                        <h3>SUV Compacto (Modelo B)</h3>
+                        <p>Ano: 2022 | Cor: Branco Perolizado | KM: 30.000</p>
+                        <p>Câmbio automático, central multimídia, câmera de ré, único dono.</p>
+                        <span class="price">R$ 72.000,00</span>
+                        <a href="contato.html" class="btn-small">Saiba Mais</a>
+                    </div>
+                    <div class="vehicle-card">
+                        <img src="img/placeholder-car-3.jpg" alt="Carro Modelo C">
+                        <h3>Esportivo Híbrido (Modelo C)</h3>
+                        <p>Ano: 2024 | Cor: Azul Elétrico | KM: 5.000</p>
+                        <p>Tecnologia híbrida, bancos em couro, pacote esportivo, baixa quilometragem.</p>
+                        <span class="price">R$ 110.000,00</span>
+                        <a href="contato.html" class="btn-small">Saiba Mais</a>
+                    </div>
+                    <div class="vehicle-card">
+                        <img src="img/placeholder-car-4.jpg" alt="Carro Modelo D">
+                        <h3>Picape Robusta (Modelo D)</h3>
+                        <p>Ano: 2021 | Cor: Prata | KM: 45.000</p>
+                        <p>Motor diesel, tração 4x4, ideal para trabalho e lazer. Revisões em dia.</p>
+                        <span class="price">R$ 60.000,00</span>
+                        <a href="contato.html" class="btn-small">Saiba Mais</a>
+                    </div>
+                </div>
+                <p class="call-to-action-small">Não encontrou o que procura? <a href="enviar_informacoes.html">Envie-nos suas preferências</a> e nós o ajudaremos a encontrar!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Soluções Automotivas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
