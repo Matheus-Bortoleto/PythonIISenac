@@ -1,29 +1,42 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Página Inicial</title>
+
+    {% block content %}
+    <!-- Título -->
+    <title>Canes Grill - Home</title>
 </head>
+
 <body>
-    <header>
-        <h1>Bem-vindo à Nossa Página Inicial</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="/contato">Contato</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <h2>Sobre Nós</h2>
-        <p>Esta é a página inicial do nosso site. Aqui você encontrará informações gerais sobre o que fazemos e nossos objetivos. Navegue pelos nossos links para saber mais!</p>
-        <p>Estamos felizes em tê-lo(a) aqui.</p>
-    </div>
-    <footer>
-        <p>&copy; 2025 Seu Site. Todos os direitos reservados.</p>
-    </footer>
-</body>
-</html>
+    {% include "partials/menu.html" %}
+     <!-- ##### Best Receipe Area Start ##### -->
+     <section class="best-receipe-area">
+        <div class="container">
+            <div class="row">
+
+                {% for chave, prato in lista_pratos.items %}
+                
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <div class="single-best-receipe-area mb-30">
+                        <img src={% static "img/bg-img/foto_receita.png" %} alt="">
+                        <div class="receipe-content">
+                            <a href="#">
+                                <h5>{{prato}}</h5>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                {% endfor %}
+
+                <!-- Single Best Receipe Area -->
+
+
+            </div>
+        </div>
+    </section>
+    <!-- ##### Best Receipe Area End ##### -->
+
+    
+    <!-- ##### Footer Area Start ##### -->
+    {% include "partials/footer.html" %}
+{% endblock %}
