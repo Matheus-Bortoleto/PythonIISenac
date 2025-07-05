@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from funcionario.models import Funcionario
 
 # Create your models here.
 class Cliente(models.Model):
@@ -17,6 +18,9 @@ class Prato(models.Model):
     rendimento = models.CharField(max_length = 100)
     categoria = models.CharField(max_length = 100)
     date_prato= models.DateTimeField(default = datetime.now, blank=True)
+    funcionario = models.ForeignKey(Funcionario, on_delete=models.CASCADE)
+    publicado = models.BooleanField(default=False)
+    foto_prato = models.ImageField(upload_to='pratos/%y/%m/%d', blank=True)
 
     def __str__(self):
         return self.nome_prato
